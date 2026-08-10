@@ -22,8 +22,8 @@ let package = Package(
         // Temporary: asset still hosted on the pre-merge thorvg.apple release.
         .binaryTarget(
             name: "ThorVG",
-            url: "https://github.com/vnixx/thorvg.apple/releases/download/0.0.3/ThorVG.xcframework.zip",
-            checksum: "1ba63313530a03dfe67c4f6ab6d6563c8baf84cdcccfe2fe00508ead18067722"
+            url: "https://github.com/vnixx/thorvg.ruyi/releases/download/1.1.0/ThorVG.xcframework.zip",
+            checksum: "be12509b5acd00ebe3d529c205ad6ad60237e73c36ddb838150a0081c8c3e1d6"
         )
     ]
 )
