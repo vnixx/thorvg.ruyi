@@ -1,0 +1,13 @@
+{
+  "modelVersion": "5.0.0",
+  "name": "thorvg-harmony",
+  "version": "0.0.1",
+  "description": "SVG-trimmed ThorVG for HarmonyOS (native C API packaging)",
+  "main": "",
+  "author": "vnixx",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@ohos/hypium": "1.0.19"
+  }
+}

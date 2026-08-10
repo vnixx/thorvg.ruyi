@@ -1,0 +1,55 @@
+name: Build Android AAR
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "android/**"
+      - "scripts/**"
+      - ".github/workflows/build-android.yml"
+  pull_request:
+    paths:
+      - "android/**"
+      - "scripts/**"
+      - ".github/workflows/build-android.yml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: android
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: android-actions/setup-android@v3
+
+      - name: Install NDK / CMake / platform
+        run: |
+          sdkmanager --install "ndk;27.2.12479018" "cmake;3.22.1" "platforms;android-35"
+
+      - name: Install meson / ninja
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y meson ninja-build
+
+      - name: Assemble release AAR
+        env:
+          ANDROID_HOME: ${{ env.ANDROID_HOME }}
+          THORVG_FORCE: "1"
+        run: |
+          echo "sdk.dir=$ANDROID_HOME" > local.properties
+          chmod +x gradlew scripts/build_native.sh ../scripts/*.sh
+          ./gradlew :thorvg:assembleRelease --no-daemon
+
+      - name: Upload AAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: thorvg-release-aar
+          path: android/thorvg/build/outputs/aar/thorvg-release.aar

@@ -1,62 +1,86 @@
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+# OS
+.DS_Store
+**/.DS_Store
+*.log
+*.swp
+hs_err_pid*
+replay_pid*
 
-## User settings
+# Shared ThorVG source (cloned at build time)
+third_party/thorvg/
+
+# Meson
+meson-private/
+meson-logs/
+
+# ---- Apple / SPM ----
 xcuserdata/
-
-## Obj-C/Swift specific
 *.hmap
-
-## App packaging
 *.ipa
 *.dSYM.zip
 *.dSYM
-
-## Playgrounds
-timeline.xctimeline
-playground.xcworkspace
-
-# Swift Package Manager
-#
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
-# Packages/
-# Package.pins
-# Package.resolved
-# *.xcodeproj
-#
-# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
-# hence it is not needed unless you have added a package configuration file to your project
-# .swiftpm
-
 .build/
+.swiftpm/
+Packages/
+Package.resolved
+*.xcodeproj
+*.xcworkspace
+!default.xcworkspace
+apple/build/
+apple/temp_frameworks/
+apple/lib/
+apple/dist/
+apple/ThorVG.xcframework/
+ThorVG.xcframework/
+ThorVG.xcframework.zip
+*.xcframework.zip
+dist/
 
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# Pods/
-#
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
+# ---- Android / Gradle ----
+android/.gradle/
+android/**/build/
+android/local.properties
+android/*.iml
+android/.idea/
+android/**/.cxx/
+android/.externalNativeBuild/
+android/captures/
+android/thorvg-src/
+android/build/
+android/thorvg/src/main/cpp/prebuilt/**
+!android/thorvg/src/main/cpp/prebuilt/.gitkeep
+android/thorvg/src/main/cpp/include/thorvg_capi.h
+android/.kotlin/
+*.aar
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+!android/gradle/wrapper/gradle-wrapper.jar
 
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
-Carthage/Build/
-
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo.
-# Instead, use fastlane to re-generate the screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
-
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots/**/*.png
-fastlane/test_output
+# ---- Harmony / DevEco ----
+harmony/node_modules/
+harmony/oh_modules/
+harmony/**/oh_modules/
+harmony/**/node_modules/
+harmony/local.properties
+harmony/.idea/
+harmony/.hvigor/
+harmony/**/build/
+harmony/**/BuildProfile.ets
+harmony/**/oh-package-lock.json5
+harmony/**/.cxx/
+harmony/**/.test/
+harmony/thorvg-src/
+harmony/build/
+harmony/thorvg/src/main/cpp/prebuilt/**
+!harmony/thorvg/src/main/cpp/prebuilt/.gitkeep
+harmony/thorvg/src/main/cpp/include/thorvg_capi.h
+*.har
+*.hap
+*.app
+*.hapl
+.clangd
+.clang-format
+.clang-tidy

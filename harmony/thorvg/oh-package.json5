@@ -1,0 +1,9 @@
+{
+  "name": "@vnixx/thorvg",
+  "version": "0.0.1",
+  "description": "SVG-trimmed ThorVG for HarmonyOS (CPU raster + C API). Higher-level wrappers live in Ruyi.",
+  "main": "Index.ets",
+  "author": "vnixx",
+  "license": "MIT",
+  "dependencies": {}
+}
