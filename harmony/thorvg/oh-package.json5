@@ -3,7 +3,11 @@
   "version": "0.0.1",
   "description": "SVG-trimmed ThorVG for HarmonyOS (CPU raster + C API only). ArkTS wrappers live in Ruyi.",
   "main": "Index.ets",
-  "author": "vnixx",
+  "author": {
+    "name": "vnixx",
+    "email": "x.rhythm@qq.com",
+    "url": "https://github.com/vnixx"
+  },
   "license": "MIT",
   "homepage": "https://github.com/vnixx/thorvg.ruyi",
   "repository": "https://github.com/vnixx/thorvg.ruyi.git",

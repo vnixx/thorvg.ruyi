@@ -9,6 +9,12 @@ It does **not** include ArkTS helpers such as `renderSvg` / PixelMap wrappers â€
 
 ## Install
 
+```bash
+ohpm install @vnixx/thorvg
+```
+
+Or in `oh-package.json5`:
+
 ```json5
 "dependencies": {
   "@vnixx/thorvg": "0.0.1"
