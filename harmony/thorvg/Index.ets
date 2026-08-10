@@ -1,3 +1,7 @@
-// Native C API only (`libthorvg.so` + `thorvg_capi.h`).
-// Higher-level APIs (e.g. renderSvg) live in the Ruyi layer.
+/**
+ * @vnixx/thorvg — native C API packaging only.
+ *
+ * This HAR provides `libthorvg.so` + ThorVG C headers for NDK/NAPI consumers.
+ * Higher-level ArkTS APIs (e.g. renderSvg → PixelMap) live in the Ruyi layer.
+ */
 export {};

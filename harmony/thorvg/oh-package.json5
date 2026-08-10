@@ -1,9 +1,18 @@
 {
   "name": "@vnixx/thorvg",
   "version": "0.0.1",
-  "description": "SVG-trimmed ThorVG for HarmonyOS (CPU raster + C API). Higher-level wrappers live in Ruyi.",
+  "description": "SVG-trimmed ThorVG for HarmonyOS (CPU raster + C API only). ArkTS wrappers live in Ruyi.",
   "main": "Index.ets",
   "author": "vnixx",
   "license": "MIT",
+  "homepage": "https://github.com/vnixx/thorvg.ruyi",
+  "repository": "https://github.com/vnixx/thorvg.ruyi.git",
+  "keywords": [
+    "thorvg",
+    "svg",
+    "native",
+    "capi",
+    "harmonyos"
+  ],
   "dependencies": {}
 }
