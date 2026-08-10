@@ -1,0 +1,10 @@
+{
+  "module": {
+    "name": "thorvg",
+    "type": "har",
+    "deviceTypes": [
+      "phone",
+      "tablet"
+    ]
+  }
+}

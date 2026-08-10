@@ -1,0 +1,37 @@
+name: Release Apple XCFramework
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Semver version (e.g. 0.0.1)"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install build tools
+        run: brew install meson ninja
+
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          chmod +x scripts/*.sh apple/scripts/*.sh
+          ./apple/scripts/release.sh "${{ inputs.version }}"

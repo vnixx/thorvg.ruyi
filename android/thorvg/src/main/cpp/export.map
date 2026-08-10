@@ -1,0 +1,6 @@
+{
+  global:
+    tvg_*;
+  local:
+    *;
+};
