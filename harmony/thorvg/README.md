@@ -17,7 +17,7 @@ Or in `oh-package.json5`:
 
 ```json5
 "dependencies": {
-  "@vnixx/thorvg": "0.0.1"
+  "@vnixx/thorvg": "1.1.0"
 }
 ```
 

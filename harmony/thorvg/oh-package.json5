@@ -1,6 +1,6 @@
 {
   "name": "@vnixx/thorvg",
-  "version": "0.0.1",
+  "version": "1.1.0",
   "description": "SVG-trimmed ThorVG for HarmonyOS (CPU raster + C API only). ArkTS wrappers live in Ruyi.",
   "main": "Index.ets",
   "author": {
